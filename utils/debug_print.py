@@ -1,11 +1,10 @@
 """
 Some functions to print model properties to debug
 """
-import numpy as np
-import sys
-sys.path.append("../modules")
 
-import display_results as display_results
+import numpy as np
+
+import utils.display_results as display_results
 from matplotlib import pyplot as plt
 
 

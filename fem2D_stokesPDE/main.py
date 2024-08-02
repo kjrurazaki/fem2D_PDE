@@ -1,8 +1,18 @@
 # Finite element code for 2D piecewise Linear Galerkin
 # Extended Stokes PDE
+import os
 import sys
-sys.path.append("../modules")
-from solver_stokes import gmres_solver
+
+if '__file__' in locals():
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    os.chdir(current_dir)
+else:
+    current_dir = os.getcwd()
+    os.chdir(os.path.join(current_dir, 'fem2D_stokesPDE'))
+
+sys.path.append("../")
+
+from utils.solver_stokes import gmres_solver
 from imposeBC import imposeBC
 
 from model import Model
@@ -12,7 +22,7 @@ import numpy as np
 import pandas as pd
 
 from scipy.sparse import csc_matrix
-import debug_print
+import utils.debug_print as debug_print
 
 
 def run_2D(model, method):

@@ -4,6 +4,17 @@
 # Velocity constant div(b) = 0
 # Forcing f(x) = 0
 # Only Dirichlet boundary conditions
+import os
+import sys
+
+if "__file__" in locals():
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    os.chdir(current_dir)
+else:
+    current_dir = os.getcwd()
+    os.chdir(os.path.join(current_dir, "fem2D_convdiffPDE"))
+
+sys.path.append("../")
 
 from solver import gmres_solver
 from imposeBC import imposeBC
@@ -12,15 +23,13 @@ from build_model import Model
 
 import numpy as np
 import pandas as pd
-import sys
-sys.path.append("../modules")
 
 from scipy.sparse import csc_matrix
 import time
 
 from matplotlib import pyplot as plt
 
-import display_results as display_results
+import utils.display_results as display_results
 
 
 def run_2D(model, method, penalty):

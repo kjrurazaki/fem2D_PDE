@@ -21,5 +21,7 @@ def gmres_solver(SYSMAT, RHS):
         error = "singular"
 
     # Solve the system using GMRES with the preconditioner
-    x, info = gmres(SYSMAT, RHS, restart=restart, tol=tol, maxiter=maxit, M=M)
+    x, info = gmres(
+        SYSMAT, RHS, restart=restart, atol=tol, rtol=tol, maxiter=maxit, M=M
+    )
     return x, info, error

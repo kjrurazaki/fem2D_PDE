@@ -1,5 +1,6 @@
 import numpy as np
-from localBasis import localBasis
+
+from utils.localBasis import localBasis
 
 
 class Element:

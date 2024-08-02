@@ -2,9 +2,7 @@ import numpy as np
 import math
 from model import Model
 
-import sys
-sys.path.append("../modules")
-from fem2D_lid_driven.solver_stokes import gauss_quadrature_weights_and_points, quadrature_integral
+from utils.solver_stokes import gauss_quadrature_weights_and_points, quadrature_integral
 
 
 def integral_tests():

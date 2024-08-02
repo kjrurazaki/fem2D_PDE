@@ -1,8 +1,9 @@
 import numpy as np
-import sys
 from matplotlib import pyplot as plt
-sys.path.append("../modules")
-import display_results as display_results
+
+import sys
+sys.path.append("../utils")
+import utils.display_results as display_results
 
 
 def imposeBC(model, method):

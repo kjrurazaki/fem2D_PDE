@@ -4,13 +4,10 @@ from rhsBuild import build_rhs
 
 import numpy as np
 import pandas as pd
-import sys
-sys.path.append("../modules")
 
 from scipy.sparse import coo_matrix
 from matplotlib import pyplot as plt
-import display_results as display_results
-
+import utils.display_results as display_results
 
 class Model:
     def __init__(self, meshdir, c, delta, only_dirichlet, element_type):

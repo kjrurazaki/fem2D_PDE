@@ -1,11 +1,10 @@
 import numpy as np
 import math
-import sys
-sys.path.append("../modules")
-from solver_stokes import gauss_quadrature_weights_and_points, find_key_for_value
 
-from localBasis import phi_funcs
-from solver_stokes import quadrature_integral
+from utils.solver_stokes import gauss_quadrature_weights_and_points, find_key_for_value
+
+from utils.localBasis import phi_funcs
+from utils.solver_stokes import quadrature_integral
 
 
 def elementalBuild(model):
